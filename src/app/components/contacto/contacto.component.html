@@ -1,0 +1,278 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 text-center text-white pt-3" id="seleccion-motivo">
+            <h2>¡CON GUSTO TE ATENDEREMOS!</h2>
+            <p>Contactanos y en menos de <b>48 horas</b> nos pondremos en contacto</p>
+            <i class="fa fa-arrow-down flecha"></i>
+            <h3 class="pt-3"><b>1. Elige un motivo</b></h3>
+            <p>Comienza eligiendo el motivo</p>
+            <select class="form-control" (change)="atraparOpcion(motivo)" name="motivo" [(ngModel)]="motivo">
+                <option value="SOPORTE">
+                    NECESITO SOPORTE
+                </option>
+                <option value="COTIZAR">
+                    QUIERO COTIZAR
+                </option>
+                <option value="CONTRATAR">
+                    QUIERO CONTRATAR
+                </option>
+                <option value="TRABAJAR">
+                    QUIERO TRABAJAR
+                </option>
+                <option value="OTRO">
+                    OTRO MOTIVO
+                </option>
+            </select>
+        </div>
+
+        <!--FORMULARIO PARA SOPORTE-->
+        <div *ngIf="motivo == 'SOPORTE'" class="col-9 bg-morado1 form-contacto" id="soporte">
+            <h2>
+                SOPORTE A CLIENTES <small>| ¿Como podemos ayudarte?</small>
+            </h2>
+            <hr class="bg-amarillo">
+            <div class="alert alert-warning">
+                <i class="fa fa-info"> </i>
+                &nbsp; Puedes abrir un ticket el cúal tiene un identificador de seguimiento único que <b>siempre
+                    será
+                    respondido.
+                </b>
+                Estamos atentos a tus necesidades.
+            </div>
+            <form class="form-row contact-form">
+                <div class="col-5">
+                    <div class="form-group mt-2">
+                        <h3 class="m-0 p-0">2. TIPO DE SOPORTE</h3>
+                        <label class="pt-0">Escoge el área de soporte</label>
+                        <select class="form-control">
+                            <option>TÉCNICO</option>
+                            <option>COMERCIAL</option>
+                        </select>
+                        <br>
+                        <h3 class="m-0 p-0">3. DATOS CLIENTE</h3>
+                        <label class="pt-0">Dejanos tus datos y los de tu empresa</label>
+                        <input class="form-control" placeholder="Nombre representate">
+                        <input class="form-control" placeholder="Nombre empresa">
+                        <input class="form-control" placeholder="Correo electronico">
+                        <input class="form-control" placeholder="Telefono actualizado">
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="form-group mt-2">
+                        <h3 class="m-0 p-0">4. DATOS NECESARIOS</h3>
+                        <label class="pt-0">¿Comó te ayudamos?</label>
+                        <input class="form-control" placeholder="Asunto">
+                        <textarea class="form-control" placeholder="Mensaje"></textarea>
+                        <label class="pt-2">Antecedentes</label>
+                        <input class="form-control-file" type="file">
+                        <button class="btn btn-secondary btn-block mt-3">
+                            ABRIR TICKET
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--FORMULARIO DE COTIZACIÓN-->
+        <div *ngIf="motivo == 'COTIZAR'" class="col-9 bg-morado2 form-contacto">
+            <h2>
+                COTIZA CON NOSOTROS <small>| Nos comprometemos con tu proyecto</small>
+            </h2>
+            <hr class="bg-amarillo">
+            <div class="alert alert-warning">
+                <i class="fa fa-info"> </i>
+                &nbsp; Cotiza uno de nuestros servicios y en <b>menos de 48 horas</b> te mandaremos nuestra propuesta.
+                <b>
+                </b>
+            </div>
+            <form class="form-row contact-form">
+                <div class="col-5">
+                    <div class="form-group mt-2">
+                        <h3 class="m-0 p-0">2. TIPO DE SERVICO</h3>
+                        <label class="pt-0">Escoge el servicio que deseas cotizar</label>
+                        <select class="form-control">
+                            <option>Aplicación Web en Nube</option>
+                            <option>Aplicación Web en Intranet</option>
+                            <option>Plataforma Online</option>
+                            <option>Desarrollo de Software</option>
+                            <option>Aplicación Móvil Hibrida</option>
+                            <option>Aplicación Móvil Nativa</option>
+                            <option>Sitio Web a Medida</option>
+                            <option>Tienda Online a Medida</option>
+                        </select>
+                        <br>
+                        <h3 class="m-0 p-0">3. DATOS EMPRESA</h3>
+                        <label class="pt-0">Dejanos tus datos y los de tu empresa</label>
+                        <input class="form-control" placeholder="Nombre representate">
+                        <input class="form-control" placeholder="Nombre empresa">
+                        <input class="form-control" placeholder="Giro o rubro">
+                        <input class="form-control" placeholder="Correo electronico">
+                        <input class="form-control" placeholder="Telefono actualizado">
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="form-group mt-2">
+                        <h3 class="m-0 p-0">4. DATOS DEL PROYECTO</h3>
+                        <label class="pt-0">Cuentanos tu idea o necesidad</label>
+                        <input class="form-control" placeholder="Nombre descriptivo">
+                        <textarea class="form-control" placeholder="Detalles del proyecto"></textarea>
+                        <input class="form-control" placeholder="Presupuesto disponible (Monto aproximado)">
+                        <label class="pt-2">Documentación y requerimientos</label>
+                        <input class="form-control-file" type="file">
+                        <button class="btn btn-secondary btn-block mt-3">
+                            COTIZAR AHORA
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--FORMULARIO DE CONTRATACIÓN-->
+        <div *ngIf="motivo == 'CONTRATAR'" class="col-9 bg-amarillo form-contacto">
+            <h2>
+                BIENVENIDO A HITCODE <small>| Haremos realidad tu proyecto</small>
+            </h2>
+            <hr class="bg-morado3">
+            <div class="alert alert-warning">
+                <i class="fa fa-info"> </i>
+                &nbsp; Rellena el formulario de pre contrato y en un <b>plazo máximo</b> de 24 horas nos pondremos en
+                contacto. Te guiaremos en todo el proceso.
+            </div>
+            <form class="form-row contact-form">
+                <div class="col-5">
+                    <div class="form-group mt-2">
+                        <h3 class="m-0 p-0">2. SERVICIO DESEADO</h3>
+                        <label class="pt-0">Escoge el servicio que deseas conntratar</label>
+                        <select class="form-control" (change)="atraparServicio(servicio)" name="servicio"
+                            [(ngModel)]="servicio">
+                            <option value="swb">Sitio Web Básico</option>
+                            <option value="swe">Sitio Web Estandar</option>
+                            <option value="sws">Sitio Web Superior</option>
+                            <option value="tob">Tienda Online Básica</option>
+                            <option value="toe">Tienda Online Estandar</option>
+                            <option value="tos">Tienda Online Superior</option>
+                        </select>
+                        <br>
+                        <h3 class="m-0 p-0">3. DATOS EMPRESA</h3>
+                        <label class="pt-0">Dejanos tus datos y los de tu empresa</label>
+                        <input class="form-control" placeholder="Nombre representate">
+                        <input class="form-control" placeholder="Nombre empresa">
+                        <input class="form-control" placeholder="Giro o rubro">
+                        <input class="form-control" placeholder="Correo electronico">
+                        <input class="form-control" placeholder="Telefono actualizado">
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="form-group mt-2">
+                        <h3 class="m-0 p-0">4. DATOS NECESARIOS</h3>
+                        <label class="pt-0">Dejanos estos datos para un mejor servicio</label>
+                        <input class="form-control" placeholder="Nombre del dominio">
+                        <input class="form-control" placeholder="URL con página similar a lo deseado">
+                        <textarea class="form-control" placeholder="Descripción del sitio o tienda"></textarea>
+                        <label class="mt-2">¿Necesitas ayuda con textos, imagenes o videos?</label>
+                        <select class="form-control">
+                            <option value="SI">Si</option>
+                            <option value="NO">No</option>
+                        </select>
+                        <p class="pt-1 pb-0 mb-0">PAGO TOTAL: <b>${{precio | number}}</b></p>
+
+                        <div class="text-center">
+                            <a class="pt-0 mt-0 text-danger" href="#">Descargar PDF con detalles del servicio</a>
+                        </div>
+
+                        <button class="btn btn-info btn-block mt-2">
+                            CONTRATAR SERVICIO
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--FORMULARIO DE POSTULACIÓN-->
+        <div *ngIf="motivo == 'TRABAJAR'" class="col-9 bg-morado3 form-contacto">
+            <h2>
+                TRABAJA EN HITCODE <small>| Únete a nuestro equipo</small>
+            </h2>
+            <hr class="bg-amarillo">
+            <div class="alert alert-warning">
+                <i class="fa fa-info"> </i>
+                &nbsp; Dejanos tus datos y tú CV, te contactaremos cuando tengamos un cupo de acuerdo a tus habilidades.
+            </div>
+            <form class="form-row contact-form">
+                <div class="col-5">
+                    <div class="form-group mt-2">
+                        <h3 class="m-0 p-0">2. SELECCIONA UN ÁREA</h3>
+                        <label class="pt-0">Escoge el área donde desearías trabajar</label>
+                        <select class="form-control">
+                            <option>DESARROLLO</option>
+                            <option>DISEÑO</option>
+                            <option>VENTAS</option>
+                        </select>
+                        <h3 class="m-0 pt-3">3. DATOS POSTULANTE</h3>
+                        <label class="pt-0">Dejanos tus datos de contacto</label>
+                        <input class="form-control" placeholder="Nombre y apellido">
+                        <input class="form-control" placeholder="Correo electronico">
+                        <input class="form-control" placeholder="Telefono actualizado">
+                        <label>Disponibilidad horaria</label>
+                        <select class="form-control">
+                            <option>Full Time (45 Horas)</option>
+                            <option>Part Time (30 Horas)</option>
+                            <option>Part Time (20 Horas)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="form-group mt-2">
+                        <h3 class="m-0 p-0">4. DATOS NECESARIOS</h3>
+                        <label class="pt-0">Datos sobre el trabajo</label>
+                        <input class="form-control" placeholder="Cargo a postular">
+                        <input class="form-control" placeholder="Pretensión de renta">
+                        <input class="form-control" placeholder="Disponibilidad Ej: Inmediata">
+                        <label>Modalidad de trabajo</label>
+                        <select class="form-control">
+                            <option value="Presencial">Presencial</option>
+                            <option value="Remoto">Remoto</option>
+                            <option value="Comisionista">Comisionista</option>
+                        </select>
+                        <label class="pt-2">Curriculum Vitae</label>
+                        <input class="form-control-file" type="file">
+                        <button class="btn btn-secondary btn-block mt-3">
+                            POSTULAR AHORA
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--FORMULARIO DE OTROS MOTIVOS-->
+        <div *ngIf="motivo == 'OTRO'" class="col-9 bg-white form-contacto-sp">
+            <h2>
+                OTRO MOTIVO <small>| Dudas, quejas, sugerencias y más.</small>
+            </h2>
+            <hr class="bg-amarillo">
+            <div class="alert alert-warning">
+                <i class="fa fa-info"> </i>
+                &nbsp; Todos los mensajes serán leidos y respondidos según nuestra disponibilidad. Queremos atenderte.
+            </div>
+            <form class="form-row contact-form">
+                <div class="col-5">
+                    <div class="form-group mt-2">
+                        <h3 class="m-0 p-0">2. DATOS USUARIO</h3>
+                        <label class="pt-0">Dejanos tus datos</label>
+                        <input class="form-control" placeholder="Nombre y apellido">
+                        <input class="form-control" placeholder="Correo electronico">
+                        <input class="form-control" placeholder="Telefono actualizado">
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="form-group mt-2">
+                        <h3 class="m-0 p-0">3. DATOS NECESARIOS</h3>
+                        <label class="pt-0">Dejanos un mensaje</label>
+                        <input class="form-control" placeholder="Asunto">
+                        <textarea class="form-control" placeholder="Mensaje"></textarea>
+                        <button class="btn btn-secondary btn-block mt-3">
+                            ENVIAR MENSAJE
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

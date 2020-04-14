@@ -1,0 +1,39 @@
+@import "../../variables";
+.prenavBg {
+  background-color: $morado1;
+}
+.nav-bg {
+  background-color: $morado2;
+}
+
+.bgBlack {
+  background-color: black;
+}
+#contacto {
+  height: 25px;
+  ul {
+    li {
+      display: inline;
+    }
+  }
+}
+.brand:active {
+  animation-name: brand;
+  animation-duration: 0.2s;
+}
+@keyframes brand {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dropdown-menu {
+  background-color: $morado2;
+  a {
+    color: white;
+  }
+}

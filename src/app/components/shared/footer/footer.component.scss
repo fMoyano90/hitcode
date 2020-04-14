@@ -1,0 +1,46 @@
+@import "../../variables";
+
+#preFooter {
+  background-color: $morado2;
+  color: white;
+  padding-top: 25px;
+  ul {
+    li {
+      a {
+        color: $amarillo;
+        transition: color 0.5s;
+      }
+    }
+  }
+}
+
+#footer {
+  background-color: $morado1;
+  p {
+    color: white;
+  }
+}
+
+#serviciosFooter {
+  ul {
+    li {
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.redesSociales {
+  ul {
+    li {
+      display: inline;
+      margin-right: 10px;
+    }
+  }
+}
+
+.textFooter {
+  margin-top: 30px;
+  padding-left: 30px;
+}

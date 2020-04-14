@@ -1,0 +1,99 @@
+@import "../variables";
+
+#appWeb {
+  padding: 30px;
+  padding-top: 20px;
+  h3 {
+    color: $amarillo;
+  }
+  p {
+    font-size: 18px;
+    color: #fff;
+    text-align: justify;
+  }
+}
+#queEs {
+  background-color: $morado1;
+  padding: 20px;
+  border-radius: 25px 25px 25px 25px;
+}
+
+#entornos {
+  h2 {
+    color: $amarillo;
+    padding-left: 30px;
+  }
+  p {
+    font-size: 18px;
+    color: #fff;
+    padding-left: 30px;
+  }
+  ol {
+    padding-left: 30px;
+    padding-right: 30px;
+    li {
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+}
+
+.amarillo {
+  background-color: $amarillo;
+}
+
+.accordion {
+  border-color: black;
+}
+
+#headingOne {
+  background: rgb(30, 0, 44);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 0, 44, 1) 0%,
+    rgba(45, 0, 64, 1) 40%,
+    rgba(255, 173, 0, 1) 100%
+  );
+  button {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+#headingTwo {
+  background: rgb(30, 0, 44);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 0, 44, 1) 0%,
+    rgba(45, 0, 64, 1) 40%,
+    rgba(255, 173, 0, 1) 100%
+  );
+  button {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+#headingThree {
+  background: rgb(30, 0, 44);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 0, 44, 1) 0%,
+    rgba(45, 0, 64, 1) 40%,
+    rgba(255, 173, 0, 1) 100%
+  );
+  button {
+    color: white;
+    text-decoration: none;
+  }
+}
+.card {
+  border: black;
+}
+.card-body {
+  background-color: $morado1;
+  color: #fff;
+}
+.text-amarillo {
+  color: $amarillo;
+}

@@ -1,0 +1,54 @@
+@import "../variables";
+
+#seleccion-motivo {
+  height: 100vh;
+  border-right: 12px dashed $amarillo;
+  select {
+    option {
+      font-size: 21px;
+    }
+  }
+}
+
+.form-contacto {
+  color: white;
+  h2 {
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+}
+.form-contacto-sp {
+  color: black;
+  h2 {
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+}
+
+.flecha {
+  font-size: 28px;
+  color: $amarillo;
+}
+
+.color-amarillo {
+  color: $amarillo;
+}
+
+.bg-morado1 {
+  background-color: $morado1;
+}
+.bg-morado2 {
+  background-color: $morado2;
+}
+.bg-morado3 {
+  background-color: $morado3;
+}
+.bg-amarillo {
+  background-color: $amarillo;
+}
+
+.contact-form {
+  div {
+    margin-left: 10px;
+  }
+}

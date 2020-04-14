@@ -1,0 +1,83 @@
+@import "../variables";
+
+.jumbotron {
+  background-color: $morado1;
+  box-shadow: 2px 2px rgba($color: #000000, $alpha: 0.5);
+  border-radius: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  h1 {
+    color: $amarillo;
+  }
+  p {
+    color: white;
+  }
+  .my-4 {
+    background-color: $amarillo;
+  }
+  .lead {
+    font-size: 21px;
+  }
+  .texto2 {
+    font-size: 18px;
+  }
+}
+
+#pqElegirnos {
+  margin-top: 20px;
+  background-color: $morado2;
+  padding-bottom: 20px;
+  h3 {
+    color: $amarillo;
+  }
+}
+.titulo {
+  font-size: 24px;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+.titulo:hover {
+  color: $amarillo;
+}
+.card-body {
+  p {
+    font-size: 18px;
+    color: $morado2;
+  }
+}
+.slogan {
+  padding-top: 20px;
+  h2 {
+    font-size: 26px;
+  }
+}
+#sidebar {
+  font-size: 16px;
+  padding: 20px;
+  background-color: $morado2;
+  color: white;
+}
+#somos {
+  div {
+    ul {
+      li {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+#ambiente {
+  background-color: $amarillo;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  div {
+    ul {
+      margin-left: 20px;
+    }
+  }
+}
+
+.text-especial {
+  font-size: 21px;
+}
