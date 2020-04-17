@@ -3,6 +3,9 @@
 #seleccion-motivo {
   height: 100vh;
   border-right: 12px dashed $amarillo;
+  i {
+    font-size: 36px;
+  }
   select {
     option {
       font-size: 21px;

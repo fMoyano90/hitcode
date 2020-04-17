@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-3 text-center text-white pt-3" id="seleccion-motivo">
+        <div class="col-3 text-center text-white pt-3 animated fadeInLeft" id="seleccion-motivo">
             <h2>¡CON GUSTO TE ATENDEREMOS!</h2>
-            <p>Contactanos y en menos de <b>48 horas</b> nos pondremos en contacto</p>
-            <i class="fa fa-arrow-down flecha"></i>
+            <p>En menos de <b>48 horas</b> nos pondremos en contacto</p>
+            <i class="fa fa-arrow-down flecha animated pulse infinite"></i>
             <h3 class="pt-3"><b>1. Elige un motivo</b></h3>
             <p>Comienza eligiendo el motivo</p>
             <select class="form-control" (change)="atraparOpcion(motivo)" name="motivo" [(ngModel)]="motivo">
@@ -26,7 +26,7 @@
         </div>
 
         <!--FORMULARIO PARA SOPORTE-->
-        <div *ngIf="motivo == 'SOPORTE'" class="col-9 bg-morado1 form-contacto" id="soporte">
+        <div *ngIf="motivo == 'SOPORTE'" class="col-9 bg-morado1 form-contacto  animated fadeInUp faster" id="soporte">
             <h2>
                 SOPORTE A CLIENTES <small>| ¿Como podemos ayudarte?</small>
             </h2>
@@ -37,7 +37,7 @@
                     será
                     respondido.
                 </b>
-                Estamos atentos a tus necesidades.
+
             </div>
             <form class="form-row contact-form">
                 <div class="col-5">
@@ -74,7 +74,7 @@
         </div>
 
         <!--FORMULARIO DE COTIZACIÓN-->
-        <div *ngIf="motivo == 'COTIZAR'" class="col-9 bg-morado2 form-contacto">
+        <div *ngIf="motivo == 'COTIZAR'" class="col-9 bg-morado2 form-contacto  animated fadeInUp faster">
             <h2>
                 COTIZA CON NOSOTROS <small>| Nos comprometemos con tu proyecto</small>
             </h2>
@@ -127,7 +127,7 @@
             </form>
         </div>
         <!--FORMULARIO DE CONTRATACIÓN-->
-        <div *ngIf="motivo == 'CONTRATAR'" class="col-9 bg-amarillo form-contacto">
+        <div *ngIf="motivo == 'CONTRATAR'" class="col-9 bg-amarillo form-contacto animated fadeInRight faster">
             <h2>
                 BIENVENIDO A HITCODE <small>| Haremos realidad tu proyecto</small>
             </h2>
@@ -187,7 +187,7 @@
             </form>
         </div>
         <!--FORMULARIO DE POSTULACIÓN-->
-        <div *ngIf="motivo == 'TRABAJAR'" class="col-9 bg-morado3 form-contacto">
+        <div *ngIf="motivo == 'TRABAJAR'" class="col-9 bg-morado3 form-contacto animated fadeIn">
             <h2>
                 TRABAJA EN HITCODE <small>| Únete a nuestro equipo</small>
             </h2>
@@ -242,7 +242,7 @@
             </form>
         </div>
         <!--FORMULARIO DE OTROS MOTIVOS-->
-        <div *ngIf="motivo == 'OTRO'" class="col-9 bg-white form-contacto-sp">
+        <div *ngIf="motivo == 'OTRO'" class="col-9 bg-white form-contacto-sp animated fadeInUp faster">
             <h2>
                 OTRO MOTIVO <small>| Dudas, quejas, sugerencias y más.</small>
             </h2>
